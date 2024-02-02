@@ -50,3 +50,25 @@ class NetworkClient {
         }
     }
 }
+
+
+/*
+class NetworkClient {
+    companion object{
+        private var networkClient: Retrofit? = null
+
+        fun getNetworkClient(): Retrofit {
+            val tempInstance = networkClient
+            return if(tempInstance!=null){
+                tempInstance
+            }else{
+                val instance = Retrofit.Builder()
+                    .baseUrl(Configuration.Base_URL)
+                    .addConverterFactory(GsonConverterFactory.create())
+                    .build()
+                networkClient = instance
+                instance
+            }
+        }
+    }
+}*/
